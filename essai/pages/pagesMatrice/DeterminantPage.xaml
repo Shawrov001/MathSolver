@@ -1,0 +1,50 @@
+﻿<Page x:Class="essai.pages.pagesMatrice.DeterminantPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:essai.pages.pagesMatrice"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d"
+      xmlns:wm="http://wpf-math.github.io"
+      xmlns:wpfmath="clr-namespace:WpfMath;assembly=WpfMath"
+      xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+      Title="DeterminantMatricePage" >
+
+    <Grid Margin="20" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Titre de la page -->
+        <TextBlock Text="Trouver le déterminant" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <!-- Section pour entrer les valeurs de la matrice -->
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" Margin="0,0,0,10" Width="183">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <TextBlock Text="Taille de la matrice :  " FontWeight="Bold" Margin="0,0,10,0"/>
+                    <xctk:IntegerUpDown Minimum="2" Maximum="10" Width="50" Value="{Binding MatrixSize, RelativeSource={RelativeSource AncestorType=Page}, Mode=TwoWay}"/>
+                </StackPanel>
+                <TextBlock Text="Entrez les valeurs de la matrice : " FontWeight="Bold" Margin="0,10,0,0"/>
+            </StackPanel>
+
+            <!-- la grille de la matrice-->
+            <UniformGrid x:Name="MatrixGrid" Margin="50,0,50,10">
+            </UniformGrid>
+
+            <Button Content="Trouver le déterminant" Width="150" Height="40" Margin="0,10,0,0" Click="OnDetMatrixClick"/>
+        </StackPanel>
+
+        <!-- Section pour afficher la matrice inversée -->
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <TextBlock Text="" FontWeight="Bold" Margin="0,0,0,10"/>
+            <controls:FormulaControl HorizontalAlignment="Center" x:Name="LatexMatrixDisplay" Formula="" Width="{Binding FormulaWidth}" Height="{Binding FormulaHeight}"/>
+        </StackPanel>
+    </Grid>
+</Page>

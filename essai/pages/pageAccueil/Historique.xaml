@@ -1,0 +1,38 @@
+﻿<Page x:Class="essai.pages.pageAccueil.Historique"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:essai.pages.pageAccueil"
+      xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+ 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="500"
+      Title="Historique">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <!-- La ligne avec le ScrollViewer -->
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- Colonne flexible -->
+            <ColumnDefinition Width="Auto"/>
+            <!-- Colonne pour le bouton -->
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Historique" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="24" FontWeight="Bold" />
+
+        <!-- Ajout d'un ScrollViewer dans Row 1 -->
+        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2" Margin="0 10 0 0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <StackPanel x:Name="HistoriqueStackPanel" >
+                
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button x:Name="ClearHistoryButton" Grid.Row="2" Grid.Column="1" Width="150" Content="🗑️ Effacer l'historique" Click="ClearHistoryButton_Click" />
+    </Grid>
+</Page>
