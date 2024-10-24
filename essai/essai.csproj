@@ -6,6 +6,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <SelfContained>true</SelfContained>  
+    <PublishSingleFile>true</PublishSingleFile>  
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>  
+    <ApplicationIcon>images\softwareLogo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
