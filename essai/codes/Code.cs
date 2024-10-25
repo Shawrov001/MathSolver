@@ -40,7 +40,6 @@ namespace essai.codes
         //on sauvegarde chaque équation latex dans la base de données
         public static void SaveInDB(string StringFormula) {
             if (!File.Exists(databasePath)) {
-                SQLiteConnection.CreateFile(databasePath);
                 CreateDB();
             }
 
