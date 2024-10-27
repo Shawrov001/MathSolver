@@ -36,7 +36,7 @@ Si vous souhaitez contribuer au projet, vous pouvez ouvrir des issues ou propose
 - **WPF** : Pour la création de l'interface graphique et des interactions utilisateurs.
 - **C#** : Le langage principal utilisé pour la logique applicative, y compris les calculs des matrices et des équations.
 - **XAML** : Pour définir l'interface utilisateur et structurer les pages de l'application.
-- **SQLite** : Pour la gestion de l'historique des matrices.
+- **SQLite** : Pour la gestion de l'historique.
 - **WPF-Math** : Pour la visualisation des formules mathématiques en LaTeX.
 - **Icones8** : Pour les icônes utilisées dans l'application.
 
